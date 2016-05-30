@@ -1,0 +1,55 @@
+<div class="table-grid-back">
+    <div class="findByGroup-layout">
+        <div id="getGoodsStore">收货门店&nbsp<i class="fa fa-long-arrow-up" aria-hidden="true"></i>&nbsp X</div>
+        <div>预收货日期&nbspX</div>
+        <div>排车线路&nbspX</div>
+    </div>
+    <div class="table-grid-title">
+        <ul>
+            <li id="li-img-width">
+                <img src="../app/img/u117_mouseOver.png" ng-click="allSelect()">
+            </li>
+            <li id="li-row-width">行</li>
+            <li>单号<i class="fa fa-filter" aria-hidden="true"></i></li>
+            <li>收货门店<i class="fa fa-filter" aria-hidden="true"></i></li>
+            <li>预期收货日期<i class="fa fa-filter" aria-hidden="true"></i></li>
+            <li>来源单号<i class="fa fa-filter" aria-hidden="true"></i></li>
+            <li>整箱数<i class="fa fa-filter" aria-hidden="true"></i></li>
+            <li>应配金额<i class="fa fa-filter" aria-hidden="true"></i></li>
+            <li>排车线路<i class="fa fa-filter" aria-hidden="true"></i></li>
+            <li>备注<i class="fa fa-filter" aria-hidden="true"></i></li>
+        </ul>
+    </div>
+    <div class="table-grid-content">
+        <ul ng-repeat="data in testDataDrder">
+            <li id="li-grid-img-width">
+                <img src="../app/img/u117_mouseOver.png" ng-click="mulSelect($index)">
+            </li>
+            <li id="li-grid-row-width">{{$index}}</li>
+            <li ><a class="color-style" href="#outerOrderFind">{{data.orderNum}}</a></li>
+            <li>{{data.getGoodsStore}}</li>
+            <li>{{data.getGoodsDate}}</li>
+            <li><a class="color-style">{{data.orderFrom}}</a></li>
+            <li>{{data.boxNum}}</li>
+            <li>{{data.mustPay}} </li>
+            <li>{{data.busLine}}</li>
+            <li>{{data.notes}}</li>
+        </ul>
+    </div>
+    <div class="data-total">
+        <ul>
+            <li id="li-grid-list-img-width">
+                <img src="../app/img/u117_mouseOver.png">
+            </li>
+            <li id="li-grid-list-width">258</li>
+            <li id="li-getGoodsStore-hide">4</li>
+            <li>28</li>
+            <li>25632.75</li>
+            <li id="li-order-from-hide">4</li>
+            <li>28</li>
+            <li>25632.75</li>
+            <li id="li-bus-line-hide">4</li>
+            <li id="li-notes-hide">4</li>
+        </ul>
+    </div>
+</div>

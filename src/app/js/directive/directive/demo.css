@@ -1,0 +1,116 @@
+.back-style{
+    width: 100%;
+    height: 100%;
+    /*background-color: paleturquoise;*/
+    min-width: 1000px;
+}
+.tabpanel-title {
+    width: 100%;
+    height: 100%;
+    /*background-color: #5cb85c;*/
+    /*;*/
+}
+.tabpanel-title-hide{
+    /*height: 100%;*/
+    /*background-color: palevioletred;*/
+    /*border-bottom: 1px solid white;*/
+    display: none;
+    /*text-align: center;*/
+
+}
+.tabpanel-title div:first-child{
+    display: block;
+}
+.default-style{
+
+}
+.tabpanel-content
+{
+    /*margin: 0 auto;*/
+    /* padding-top: 0; */
+    padding-left: 0;
+    list-style-image: none;
+    list-style-type: none;
+    height: 50px;
+    width: 50%;
+    background-color:#F4F4F4;
+    float: left;
+    margin-bottom: 0px;
+}
+.tabpanel-content li{
+    height: 40px;
+    float: left;
+    width: 20%;
+    text-align: center;
+    line-height: 40px;
+    background-color: #e4e4e4;
+    margin-top: 10px;
+}
+/*li:first-child{*/
+    /*background-color: white;*/
+/*}*/
+.tabpanel-content li:hover{
+    background-color: white;
+}
+.active{
+    background-color: white;
+}
+.tabpanel-content span{
+    background-color: #11A99b;
+    color: white;
+    margin-left: 5px;
+    /*border-radius: 1px solid #11a99b;*/
+    border-radius: 5px;
+    /* width: 20px; */
+    padding: 2px;
+}
+.li-three-btn{
+    background-color: deeppink;
+}
+.li-left-title{
+    width: 20%;
+}
+.title-menu-left{
+ float: left;
+    width: 20%;
+    height: 50px;
+    background-color: #F4F4F4;
+    line-height: 50px;
+    text-align: center;
+    font-size: x-large;
+}
+.title-menu-right{
+    float: left;
+    width: 30%;
+    height: 50px;
+    background-color: #F4F4F4;
+    line-height: 50px;
+}
+.title-menu-right div{
+    float: right;
+    height: 30px;
+    width: 80px;
+    margin-left: 10px;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+.menu-btn-create{
+    margin-right: 30px;
+    background-color: #6180DA;
+}
+.menu-btn-insert{
+    background-color: #596273;
+}
+.menu-btn-refresh{
+    background-color: #596273;
+}
+.top-menu{
+    height: 50px;
+    width: 100%;
+}
+h1{
+    margin-top: 0px;
+}

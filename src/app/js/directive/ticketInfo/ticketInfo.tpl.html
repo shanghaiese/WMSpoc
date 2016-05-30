@@ -1,0 +1,162 @@
+<div>
+  <div class="row">
+    <div>
+      <div class="row">
+        <div class="col-lg-4 pull-left btn-padding">
+          <div class="inline">
+            <button class="btn btn-primary btn-green"><i class="fa fa-floppy-o"></i>保存</button>
+          </div>
+          <div class="inline">
+            <div class="btn-group" role="group" aria-label="1">
+              <button type="button" class="btn btn-default btn-print"><i class="fa fa-refresh"></i>打印</button>
+              <button type="button" class="btn btn-default btn-print"><i class="fa fa-arrow-circle-down"></i>打印预览</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 pull-right">
+          <div class="inline"><a ng-click="showText = !showText"><i class="fa fa-pencil-square"></i> 备注</a></div>
+          <div class="inline"><a ng-click="showText = !showText"><i class="fa fa-paperclip"></i> 附件</a><span class="badge badge-secucess"></span></div>
+          <div class="inline"><a ng-click="showText = !showText"><i class="fa fa-clock-o"></i> 动态</a></div>
+
+          <div class="text-box" ng-show="showText">
+            <div class="row">
+              <div class="container-fluid">
+                <div class="inline tabName"><a ng-click="showEditText"><i class="fa fa-pencil-square"></i> 备注</a></div>
+                <div class="inline tabName"><a ng-click="showEditText"><i class="fa fa-paperclip"></i> 附件</a><span class="badge badge-secucess"></span></div>
+                <div class="inline tabName"><a ng-click="showEditText"><i class="fa fa-clock-o"></i> 动态</a></div>
+                <div class="inline pull-right"ng-click="close()"><i class="fa fa-times"></i></div>
+              </div>
+            </div>
+            <hr class="text-hr">
+            <div class="row">
+              <div class="container-fluid" >
+                <textarea class="form-control inuput-text" rows="4"></textarea>
+                <div>
+                  <div><i></i>   <i></i></div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="row panel-size">
+        <div class="info-panel-header container-fluid">
+          <div class="col-lg-2 pull-left">概要信息</div>
+          <div class="col-lg-5 pull-right">
+            <div class="col-sm-3">当前完成进度：</div>
+            <div class="col-sm-4">
+              <div class="progress">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3"> 已拣：60% </div>
+            <div class="col-sm-1"><a ><i class="fa fa-refresh"></i></a></div>
+          </div>
+        </div>
+        <div class="info-panel-body container-fluid">
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-sm-4 info-detail infoTitle">收货门店:</div>
+              <div class="col-sm-8 info-detail">[99999999]</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 info-detail infoTitle">货主:</div>
+              <div class="col-sm-8 info-detail">DXZB-鼎新集团</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-sm-4 info-detail infoTitle">发货日期:</div>
+              <div class="col-sm-8 info-detail">2016-4-20</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 info-detail infoTitle">来源单号:</div>
+              <div class="col-sm-8 info-detail">--</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-sm-4 info-detail infoTitle">作业号:</div>
+              <div class="col-sm-8 info-detail"><a href="#">00076320160003</a></div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 info-detail infoTitle">出货仓位:</div>
+              <div class="col-sm-8 info-detail">YN-正常仓</div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="row">
+              <div class="col-sm-4 info-detail infoTitle">是否收现:</div>
+              <div class="col-sm-8 info-detail">--</div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4 info-detail infoTitle"></div>
+              <div class="col-sm-8 info-detail"></div>
+            </div>
+          </div>
+        </div>
+        <div class="info-panel-footer container-fluid">
+          <div>
+            <div class="col-sm-4 padding-well">
+              <div class="col-sm-6">
+                <div class="infoTitle">
+                  应配数量
+                </div>
+                <div class="main-number">
+                  228
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="infoTitle">
+                  应配总金额（￥）
+                </div>
+                <div class="main-number">
+                  25632.75
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 span-btn">
+              <div class="col-sm-6">
+                <div class="infoTitle">
+                  应配数量
+                </div>
+                <div class="primary-number">
+                  228
+                </div>
+              </div>
+              <div class="col-sm-6 ">
+                <div class="infoTitle">
+                  应配总金额（￥）
+                </div>
+                <div class="primary-number">
+                  25632
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 span-btn">
+              <div class="col-sm-6">
+                <div class="infoTitle">
+                  应配数量
+                </div>
+                <div class="true-number">
+                  228
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="infoTitle">
+                  应配总金额（￥）
+                </div>
+                <div class="true-number">
+                  25632
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,142 @@
+.default_style{
+  width: auto;
+  height: 650px;
+  float: left;
+  /*background-color: aqua;*/
+  position: absolute;
+  z-index: 10;
+
+}
+.default_list_style{
+  width: auto;
+  height: 100%;
+  background-color:#202637;
+  float: left;
+  margin: 0;
+  padding-left: 0;
+}
+.default_div_style{
+  width: 260px;
+  height: 100%;
+  /*background-color: palegoldenrod;*/
+  float: left;
+  position: absolute;
+  z-index: 2000;
+  top:0;
+  left: 260px;
+
+
+}
+.default_list_style li{
+  width: 100%;
+  height:50px;
+  line-height: 50px;
+  text-align: center;
+  color: white;
+  list-style-type: none;
+
+}
+.default_list_style li:hover{
+  background-color: #32405A;
+  cursor: pointer;
+  border-left:3px solid #11A99B ;
+}
+.li-fir-left{
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #11A99B;
+
+}
+.li-fir-left img{
+  height: 30px;
+  /* line-height: 30px; */
+  margin-top: 10px;
+}
+.li-fir-right{
+  float: left;
+  width: 50%;
+  height: 100%;
+  background-color: #11A99B;
+}
+.li-fir-right img{
+  margin-top: 10px;
+  float: right;
+  margin-right: 10px;
+}
+.li-sec-l{
+  height: 100%;
+  width: 60px;
+  float: left;
+}
+.li-sec-l img{
+  margin-top: 13px;
+}
+.li-sec-r{
+  height: 100%;
+  width: 200px;
+  float: left;
+}
+.li-sec-l-text{
+  height: 100%;
+  width: 140px;
+  float: left;
+}
+.li-sec-r-img{
+  height: 100%;
+  width: 60px;
+  float: left;
+}
+.li-sec-r-img img{
+  margin-top: 13px;
+}
+。li-sec-l-text{
+  text-align: center;
+
+}
+.default_div_style_top{
+  width: 300px;
+  height: 50px;
+  background-color: transparent;
+}
+.default_div_style_bottom{
+  width: 300px;
+  height: 600px;
+  display: none;
+}
+.default_div_style_bottom div{
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color:  #32405A;
+  color: white;
+}
+.active{
+  background-color: #32405A;
+}
+.short60{
+  width: 60px;
+  height: 100%;
+  background-color: #11A99B;
+}
+.short60 img{
+
+  display: none;
+  margin-left: 5px;
+  /* height: 34px; */
+  /* line-height: 50px; */
+  padding: 10px;
+
+}
+/*.test{*/
+/*float: left;*/
+/*z-index: 4000;*/
+/*position: absolute;*/
+/*}*/
+/*.test_1{*/
+/*width: 500px;*/
+/*height: 500px;*/
+/*float: left;*/
+/*background-color: olivedrab;*/
+/*position: relative;*/
+/*}*/

@@ -1,0 +1,102 @@
+<div class="order-select-opt">
+    <!--<div class="select-opt1" ng-show="isShow">-->
+        <!--<div class="shopCode">-->
+            <!--<span>门店代码:</span>-->
+            <!--<input class="shopCodeInput" type="text">-->
+        <!--</div>-->
+        <!--<div class="send-goods-date">-->
+            <!--<span>发货日期:</span>-->
+            <!--<input type="text">-->
+            <!--<span>至</span>-->
+            <!--<input type="text">-->
+        <!--</div>-->
+        <!--<div class="send-position">-->
+            <!--<input type="text">-->
+            <!--<span>出货仓位:</span>-->
+
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="select-opt2" ng-show="isShow">-->
+        <!--<div class="shopCode">-->
+            <!--<span>包含货品:</span>-->
+            <!--<input class="shopCodeInput" type="text">-->
+        <!--</div>-->
+        <!--<div class="send-goods-date">-->
+            <!--<span>排车线路:</span>-->
+            <!--<input type="text">-->
+            <!--<span>至</span>-->
+            <!--<input type="text">-->
+        <!--</div>-->
+        <!--<div class="extra-check-opt">-->
+            <!--<input type="text">-->
+            <!--<span>示意加查询条件:</span>-->
+
+        <!--</div>-->
+    <!--</div>-->
+    <div class="option-select-typedef" ng-show="isShow">
+        <form-directive></form-directive>
+      {{aaa}}
+    </div>
+    <div class="select-opt3">
+        <div class="shopCode" id="shopCode">
+            <div ng-show="isShow">
+                <div class="check"><i class="fa fa-search" aria-hidden="true"></i>查询</div>
+                <div class="delete"><i class="fa fa-times" aria-hidden="true"></i>清除</div>
+            </div>
+            <div ng-show="!isShow" class="hideOrShow">
+                <div>
+                    发货日期：2016-5-16 至 2016-5-20&nbspX
+                </div>
+                <div>
+                    出货仓位：全部&nbspX
+                </div>
+                <div>
+                    排车线路：12-默认路线&nbspX
+                </div>
+                <div>
+                    清除&nbspX
+                </div>
+            </div>
+        </div>
+        <div class="send-goods-date" ng-show="false">
+
+        </div>
+        <div class="extra-check-opt" id="extra-check-opt-check">
+            <div class="highcheck">高级查询</div>
+            <div class="handup" ng-click="hideSerch()" ng-show="isShow"><i class="fa fa-angle-double-up" aria-hidden="true"></i>&nbsp收起</div>
+            <div class="handup" ng-click="hideSerch()" ng-show="!isShow"><i class="fa fa-angle-double-down" aria-hidden="true"></i>&nbsp展开</div>
+        </div>
+    </div>
+</div>
+<div class="btn-select-opt">
+    <div class="select-opt3">
+        <div class="shopCode">
+            <div>
+                <div class="formCount">已选单据9999张</div>
+                <div class="insertCount"><i class="fa fa-plus-circle" aria-hidden="true"></i>&nbsp加入波次</div>
+                <div class="outer-ignore-copy"><i class="fa fa-arrow-circle-up" aria-hidden="true"></i>&nbsp导出</div>
+                <div class="outer-ignore-copy"><i class="fa fa-files-o" aria-hidden="true"></i>&nbsp复制</div>
+                <div class="outer-ignore-copy"><i class="fa fa-times-circle-o" aria-hidden="true"></i>&nbsp作废</div>
+            </div>
+        </div>
+        <div class="send-goods-date" ng-show="false">
+
+        </div>
+        <div class="extra-check-opt" id="extra-check-opt">
+            <div>
+
+            <div class="setting"><i class="fa fa-wrench" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></div>
+            <div class="findByGroup" ng-click="optionShow()">分组查看
+              <switch-btn></switch-btn>
+            </div>
+            <div class="columSelect" ng-click="imgHide()">列选项
+              <switch-btn></switch-btn>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="form-table-list">
+    <grid-table totalhide="true"></grid-table>
+    <pages></pages>
+</div>

@@ -1,0 +1,15 @@
+/* this file is newui base scss for golbal use */
+
+
+@import 'base-variables';
+
+.content-margin{
+  margin-left: 50px;
+  min-width: 1375px;
+  overflow: auto;
+
+}
+
+.well-width{
+  min-width: 1500px;
+}

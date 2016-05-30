@@ -1,0 +1,305 @@
+.inline {
+  display: inline-block;
+}
+.list-inline{
+  display: inline;
+}
+a{
+  text-decoration: none;
+}
+.default_style {
+  position:absolute;;
+  /*background-color: aqua;*/
+}
+.side-list{
+  height: 100%;
+  margin: 0;
+  padding-left: 0;
+}
+
+
+.default_div_style {
+  width: 200px;
+  height: 100%;
+  /*background-color: palegoldenrod;*/
+}
+
+.rightIcon{
+  width: 50px;
+  padding-left: 10px;
+}
+.rightCoverIcon{
+  width:50px;
+  span{
+    padding-left: 19px;
+  }
+}
+
+.rightSelect{
+    width: 200px;
+    line-height: 50px;
+    height: auto;
+    color: $sideBar-color;
+    list-style-type: none;
+    background-color: $primary-sideBar;
+    display: none;
+    z-index:-20;
+    &:hover {
+      background-color: $primary-sideBar-li-background;
+      border-left:$list-border-left;
+      color: $white;
+    }
+  }
+
+.rightSelectIcon{
+  margin-left: 60px;
+}
+
+
+
+.side-list .li-header {
+  width: 100%;
+  height: 34px;
+  text-align: center;
+  color: white;
+  list-style-type: none;
+  &:hover {
+    cursor: pointer;
+
+  }
+}
+.icon-margin {
+  margin-top: 7px;
+  font-size: 1.5em;
+}
+
+.li-sec-r {
+  height: 100%;
+  width: 200px;
+  float: left;
+}
+
+.li-sec-l-text {
+  height: 100%;
+  width: 140px;
+  float: left;
+}
+
+.li-sec-r-img {
+  height: 100%;
+  width: 60px;
+  float: left;
+  img {
+    margin-top: 13px;
+  }
+}
+
+。li-sec-l-text {
+  text-align: center;
+}
+
+.default_div_style_top {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+}
+
+.default_div_style_bottom {
+  width: 200px;
+  height: 100%;
+  display: none;
+  z-index:-20;
+  div {
+    width: 100%;
+    height: 100%;
+    display: none;
+    left:0;
+    top:0;
+    background-color: $list-hover-bgColor;
+    color: white;
+    z-index:-20;
+  }
+}
+
+.active {
+  background-color: $list-hover-bgColor;
+}
+
+.short60 {
+  width: 50px;
+  height: 100%;
+  background-color: $list-hover-bgColor;
+}
+
+.list-search{
+  padding: 10px 5px 10px 5px;
+  margin: 5px;
+}
+
+.list-search-input{
+  margin-top: 8px;
+  border: 0;
+  border-radius: 0;
+  background-color: $input-bgColor;
+  color: $white;
+}
+.form-padding{
+  margin-top:8px;
+}
+.list-search-btn{
+  background-color: $input-bgColor;
+  color: $search-btn-iconColor;
+  border: 0;
+  border-radius: 0;
+  height: 34px;
+}
+
+.list-hr {
+  margin: 8px 0;
+  border-top: 1px solid $hr-lightGray;
+}
+
+.left-list-hr {
+  width: 50px;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $hr-lightGray;
+}
+.right-list-hr {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $hr-lightGray;
+}
+
+.list-header-left{
+  background-color: $show-btn;
+  color: $list-header-color;
+  cursor: pointer;
+  width: 50px;
+  height:34px;
+}
+
+.list-header-right{
+  background-color: $show-btn;
+  color: $list-header-color;
+  cursor: pointer;
+  width: 200px;
+  display: none;
+  z-index:-20;
+  height:34px;
+}
+
+
+
+.list-order{
+  list-style-type: none;
+  padding:0;
+  text-align: left;
+  max-height:650px;
+  .secondary-list-header{
+    font-size: 1.5em;
+    color:$listTitle-color;
+    padding:5px 0px 5px 30px;
+    border-bottom: $btn-border;
+  }
+
+  .secondary-list-content{
+    font-size: 1.2em;
+    color:$list-color ;
+    padding-left: 30px;
+    &:hover{
+      background-color: $show-btn;
+      color: $white;
+    }
+  }
+}
+
+.list-scroll{
+  overflow-y:hidden;
+}
+.leftPart{
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  color: $sideBar-color;
+  list-style-type: none;
+  line-height: 50px;
+  list-style-type: none;
+  background-color: $primary-sideBar;
+  &:hover {
+    background-color: $primary-sideBar-li-background;
+    border-left:$list-border-left;
+    color: $white;
+    a{
+      color: $white;
+    }
+  }
+  a{
+    color: $sideBar-color;
+  }
+}
+
+.leftPart {
+  .hover-event{
+    top:34px;
+    left:50px;
+    display: none;
+    z-index:30;
+    position: absolute;
+    height:500px;
+    width: 200px;
+    background-color: black;
+  }
+}
+
+.leftPart:hover .hover-event{
+    cursor: pointer;
+    display: block;
+    max-height:500px;
+    width: 200px;
+    z-index: 20;
+}
+
+.rightPart{
+  height: 50px;
+  width: 200px;
+  line-height: 50px;
+  color: $sideBar-color;
+  list-style-type: none;
+  background-color: $primary-sideBar;
+  display: none;
+  z-index:20;
+  &:hover {
+    background-color: $primary-sideBar-li-background;
+    border-left:$list-border-left;
+    color: $white;
+    a{
+      color: $white;
+    }
+  }
+  a{
+    color: $sideBar-color;
+  }
+}
+
+.rightPart {
+  .hover-event{
+    top:34px;
+    left:200px;
+    display: none;
+    z-index:20;
+    position: fixed;
+    height:500px;
+    width: 200px;
+    background-color: $sideBar-bgColor-hover;
+  }
+}
+
+.rightPart:hover .hover-event{
+  position: fixed;
+  cursor: pointer;
+  display: block;
+  max-height:500px;
+  width: 200px;
+}
+

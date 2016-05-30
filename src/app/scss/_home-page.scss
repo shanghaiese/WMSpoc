@@ -1,0 +1,135 @@
+.head-padding {
+  padding: 0px;
+  margin: 0px;
+}
+
+.inline {
+  display: inline-block;
+}
+.list-inline{
+  display: inline;
+}
+.scroll-btn-hover {
+  color: $fontColor;
+  border-radius: 2px;
+  padding: 5px;
+  height: 28px;
+  width: 27px;
+}
+
+.scroll-icon {
+  text-align: center;
+}
+
+.scroll-btn-hover:hover {
+  color: $fontColor;
+  border: solid 1px $list-color;
+  cursor: pointer;
+}
+
+.help-btn {
+  height: 34px;
+  width: 53px;
+  padding-left: 12px;
+  padding-top: 7px;
+  color: $font-color;
+  cursor: pointer;
+  &:hover {
+    color: $btn-green;
+  }
+  &:active, &:after, &:focus, &:visited {
+    background-color: $line-gray;
+    color: #434343;
+  }
+}
+
+.toggle-btn {
+  height: 34px;
+  padding-left: 12px;
+  padding-top: 7px;
+  color: #888888;
+  cursor: pointer;
+  &:active, &:after, &:focus, &:visited {
+    background-color: #F2F2F2;
+    color: #434343;
+  }
+}
+
+.log-btn {
+  height: 34px;
+  width: 160px;
+  padding-left: 12px;
+  padding-top: 7px;
+  margin-right: 30px;
+  color: #888888;
+  cursor: pointer;
+  :active, :after, :focus, :visited {
+    background-color: #F2F2F2;
+    color: #434343;
+  }
+}
+
+.user-btn-margin {
+  margin-right: 30px;
+}
+
+.highlight-number-danger {
+  border-radius: 50%;
+  width: 20px;
+  color: #FFFFFF;
+  background-color: #FF6E4E;
+  text-align: center;
+}
+.list-contact{
+  border: 0;
+  border-radius: 3px;
+}
+
+.list-warning {
+  border: 0;
+  border-radius: 3px;
+  padding-top:0px ;
+  width:300px;
+}
+
+.list-warning-header {
+  margin: 0px;
+  background-color: #3C4B66;
+  color: #FFFFFF;
+  padding: 4px 0 4px 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+.list-warning-content{
+  border-bottom: $list-border;
+}
+
+.list-warning-content:hover{
+  background-color: $line-gray;
+  cursor: pointer;
+
+}
+
+.list-warning-footer {}
+
+.list-wharehouse{
+  border: 0;
+  border-radius: 3px;
+  padding-top:0px ;
+  width: 100px;
+}
+
+.list-wharehouse-header {
+  margin: 0px;
+  background-color: #3C4B66;
+  color: #FFFFFF;
+  width: 160px;
+  padding: 4px 0 4px 10px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.warehouse-check{
+  color:$btn-green;
+  background-color: $list-checked;
+}
