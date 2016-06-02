@@ -17,6 +17,7 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 
 // import components, base first
 @import "base";
+
 @import "home-page";
 @import "demo";
 
@@ -25,8 +26,8 @@ $icon-font-path: "/bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "pageDemo";
 @import "orderSummary";
 @import "gridNoBtnDemo";
+@import "outerOrderFind";
 @import "topBarDirective";
 @import "tanpanel";
-@import "outerOrderFind";
-//@import "leftVerticalNav";
 @import "left-vertical-menu";
+

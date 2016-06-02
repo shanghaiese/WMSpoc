@@ -1,64 +1,105 @@
 <top-bar></top-bar>
-<div class="row" id="left-margin">
-  <div>
+<div class="row" >
+  <div class="panel-info">
     <div class="row">
       <div class="col-lg-4 pull-left btn-padding">
         <div class="inline">
-          <button class="btn btn-primary btn-green"><i class="fa fa-floppy-o"></i>保存</button>
+          <button class="btn btn-primary btn-green" id="btn-no-border"><i class="fa fa-floppy-o"></i>&nbsp;保存</button>
         </div>
         <div class="inline">
           <div class="btn-group" role="group" aria-label="1">
-            <button type="button" class="btn btn-default btn-print"><i class="fa fa-refresh"></i>打印</button>
-            <button type="button" class="btn btn-default btn-print"><i class="fa fa-arrow-circle-down"></i>打印预览</button>
+            <button type="button" class="btn btn-default btn-print"><i class="fa fa-refresh"></i>&nbsp;打印</button>
+            <button type="button" class="btn btn-default btn-print"><i class="fa fa-arrow-circle-down"></i>&nbsp;打印预览</button>
           </div>
         </div>
       </div>
-      <div class="col-lg-3 pull-right">
-        <div class="inline"><a ng-click="showText = !showText"><i class="fa fa-pencil-square"></i> 备注</a></div>
-        <div class="inline"><a ng-click="showText = !showText"><i class="fa fa-paperclip"></i> 附件</a><span class="badge badge-secucess"></span></div>
-        <div class="inline"><a ng-click="showText = !showText"><i class="fa fa-clock-o"></i> 动态</a></div>
+      <div class="col-lg-2 pull-right tex-bar-padding">
+        <div class="inline tabBtn"><a ng-click="outerOrderFindVm.showText = !outerOrderFindVm.showText"><i class="fa fa-pencil-square"></i> 备注</a></div>
+        <div class="inline tabBtn"><a ng-click="outerOrderFindVm.showText = !outerOrderFindVm.showText"><i class="fa fa-paperclip"></i> 附件</a><div class="inline highlight-number-success">6</div></div>
+        <div class="inline tabBtn"><a ng-click="outerOrderFindVm.showText = !outerOrderFindVm.showText"><i class="fa fa-clock-o"></i> 动态</a></div>
 
-        <div class="text-box" ng-show="showText">
+
+
+        <div class="text-box" ng-show="outerOrderFindVm.showText">
           <div class="row">
-            <div class="container-fluid">
-              <div class="inline tabName"><a ng-click="showEditText"><i class="fa fa-pencil-square"></i> 备注</a></div>
+            <!--<div class="container-fluid tab-choice">
+              <div class="inline tabName"><a ng-click="showEditText"><i class="fa fa-pencil-square"></i> 备注 <div class="info-pin inline"></div></a></div>
               <div class="inline tabName"><a ng-click="showEditText"><i class="fa fa-paperclip"></i> 附件</a><span class="badge badge-secucess"></span></div>
               <div class="inline tabName"><a ng-click="showEditText"><i class="fa fa-clock-o"></i> 动态</a></div>
-              <div class="inline pull-right"ng-click="close()"><i class="fa fa-times"></i></div>
-            </div>
-          </div>
-          <hr class="text-hr">
-          <div class="row">
-            <div class="container-fluid" >
-              <textarea class="form-control inuput-text" rows="4"></textarea>
-              <div>
-                <div><i></i>   <i></i></div>
+
+            </div>-->
+            <div class="row">
+              <div class="col-sm-8 tab-choice">
+                <uib-tabset active="active">
+                  <uib-tab index="0">
+                    <uib-tab-heading>
+                      <div class="inline tabName"><a ng-click="outerOrderFindVm.showEditText"><i class="fa fa-pencil-square"></i> 备注 <div class="info-pin inline"></div></a></div>
+                    </uib-tab-heading>
+                    <div class="row">
+                      <div class="container-fluid" >
+                        <textarea class="form-control inuput-text" rows="4"></textarea>
+                        <div class="text-footer">
+                          <div class="col-sm-3">
+                            <div class="inline"><i class="fa fa-paperclip"></i></div>
+                            <div class="inline"><i class="fa fa-smile-o"></i></div>
+                          </div>
+                          <div class="col-sm-8 pull-right">
+                            <button class="btn btn-success btn-green pull-right textBox-btn"><i class="fa fa-check submit-btn"></i>确定</button>
+                          </div>
+
+                        </div>
+                        <div class="container-fulid">
+                          <img src="/app/img/cloud2.png">
+                        </div>
+                      </div>
+                    </div>
+                  </uib-tab>
+                  <uib-tab index="1">
+                    <uib-tab-heading>
+                      <div class="inline tabName"><a ng-click="outerOrderFindVm.showEditText"><i class="fa fa-paperclip"></i> 附件</a><span class="badge badge-secucess"></span></div>
+                    </uib-tab-heading>
+                    <div>
+                      这里是附件选项页面
+                    </div>
+                  </uib-tab>
+                  <uib-tab index="2">
+                    <uib-tab-heading>
+                      <div class="inline tabName"><a ng-click="outerOrderFindVm.showEditText"><i class="fa fa-clock-o"></i> 动态</a></div>
+                    </uib-tab-heading>
+                    <div>
+                      这里是动态选项页面
+                    </div>
+                  </uib-tab>
+                </uib-tabset>
               </div>
+              <div class="col-sm-2 inline pull-right close-margin"ng-click="outerOrderFindVm.close()"><i class="fa fa-times"></i></div>
             </div>
+
           </div>
 
         </div>
       </div>
     </div>
     <div class="row panel-size" id="no-shadow">
-        <div class="info-panel-header container-fluid">
-          <div class="col-lg-2 pull-left" id="font-style">概要信息</div>
-          <div class="col-lg-5 pull-right">
-            <div class="col-sm-1" id="refresh-padding-style"><a ><i class="fa fa-refresh"></i></a></div>
-            <div class="col-sm-2" id="percent-style"> 已拣：60% </div>
-
-            <div class="col-sm-4" id="float-right">
-              <div class="progress" id="progress-margin">
-                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+        <div class="info-panel-header container-fluid" id="scroll-hide-event">
+          <div class="col-sm-2 pull-left" id="font-style">概要信息</div>
+          <div class="col-sm-4 pull-right title-padding">
+            <div class="row">
+              <div class="col-sm-1 pull-right" ><a ><i class="fa fa-refresh"></i></a></div>
+              <div class="col-sm-2 pull-right" > 已拣：60% </div>
+              <div class="col-sm-3 pull-right progress-margin">
+                <div class="progress bar-size">
+                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                  </div>
                 </div>
               </div>
+              <div class="col-sm-3 pull-right subTitle-size" >当前完成进度：</div>
             </div>
-            <div class="col-sm-2" id="completeProgress">当前完成进度：</div>
           </div>
           </div>
         <div class="info-panel-body container-fluid">
           <div class="col-md-3">
-            <div class="row">
+            <div class="row info-margin">
               <div class="col-sm-4 info-detail infoTitle">收货门店:</div>
               <div class="col-sm-8 info-detail">[99999999]</div>
             </div>
@@ -68,7 +109,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="row">
+            <div class="row info-margin">
               <div class="col-sm-4 info-detail infoTitle">发货日期:</div>
               <div class="col-sm-8 info-detail">2016-4-20</div>
             </div>
@@ -78,7 +119,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="row">
+            <div class="row info-margin">
             <div class="col-sm-4 info-detail infoTitle">作业号:</div>
             <div class="col-sm-8 info-detail"><a href="#">00076320160003</a></div>
           </div>
@@ -88,7 +129,7 @@
             </div>
           </div>
           <div class="col-md-3">
-            <div class="row">
+            <div class="row info-margin">
               <div class="col-sm-4 info-detail infoTitle">是否收现:</div>
               <div class="col-sm-8 info-detail">--</div>
             </div>
@@ -161,17 +202,17 @@
 </div>
 <div class="nav-back">
   <nav class="navbar navbar-default navbar-static-top" role="navigation">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="">货品信息</a>
+    <div class="navbar-header"  >
+      <a ng-click="outerOrderFindVm.goodsInfo()" ng-style="outerOrderFindVm.goodsInfostyle" class="navbar-brand" href=""><b>货品信息</b></a>
     </div>
     <div>
       <ul class="nav navbar-nav">
-        <li class="active"><a href="">门店信息</a></li>
-        <li><a href="">其他信息</a></li>
+        <li class="active"><a ng-click="outerOrderFindVm.storeInfo()" ng-style="outerOrderFindVm.storeInfostyle" href=""><b>门店信息</b></a></li>
+        <li><a ng-style="outerOrderFindVm.otherInfostyle" ng-click="outerOrderFindVm.otherInfo()" href=""><b>其他信息</b></a></li>
       </ul>
     </div>
     <div class="navbar-header new-blank">
-      <a class="navbar-brand" href=""><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp;新窗口打开</a>
+      <a class="navbar-brand" href=""><i class="fa fa-external-link" aria-hidden="true"></i>&nbsp新窗口打开</a>
     </div>
   </nav>
   <div class="form-search">

@@ -1,49 +1,14 @@
 <div class="order-select-opt">
-    <!--<div class="select-opt1" ng-show="isShow">-->
-        <!--<div class="shopCode">-->
-            <!--<span>门店代码:</span>-->
-            <!--<input class="shopCodeInput" type="text">-->
-        <!--</div>-->
-        <!--<div class="send-goods-date">-->
-            <!--<span>发货日期:</span>-->
-            <!--<input type="text">-->
-            <!--<span>至</span>-->
-            <!--<input type="text">-->
-        <!--</div>-->
-        <!--<div class="send-position">-->
-            <!--<input type="text">-->
-            <!--<span>出货仓位:</span>-->
-
-        <!--</div>-->
-    <!--</div>-->
-    <!--<div class="select-opt2" ng-show="isShow">-->
-        <!--<div class="shopCode">-->
-            <!--<span>包含货品:</span>-->
-            <!--<input class="shopCodeInput" type="text">-->
-        <!--</div>-->
-        <!--<div class="send-goods-date">-->
-            <!--<span>排车线路:</span>-->
-            <!--<input type="text">-->
-            <!--<span>至</span>-->
-            <!--<input type="text">-->
-        <!--</div>-->
-        <!--<div class="extra-check-opt">-->
-            <!--<input type="text">-->
-            <!--<span>示意加查询条件:</span>-->
-
-        <!--</div>-->
-    <!--</div>-->
-    <div class="option-select-typedef" ng-show="isShow">
+    <div class="option-select-typedef" ng-show="orderSunmmaryVm.isShow">
         <form-directive></form-directive>
-      {{aaa}}
     </div>
     <div class="select-opt3">
         <div class="shopCode" id="shopCode">
-            <div ng-show="isShow">
+            <div ng-show="orderSunmmaryVm.isShow">
                 <div class="check"><i class="fa fa-search" aria-hidden="true"></i>查询</div>
                 <div class="delete"><i class="fa fa-times" aria-hidden="true"></i>清除</div>
             </div>
-            <div ng-show="!isShow" class="hideOrShow">
+            <div ng-show="!orderSunmmaryVm.isShow" class="hideOrShow">
                 <div>
                     发货日期：2016-5-16 至 2016-5-20&nbspX
                 </div>
@@ -63,8 +28,8 @@
         </div>
         <div class="extra-check-opt" id="extra-check-opt-check">
             <div class="highcheck">高级查询</div>
-            <div class="handup" ng-click="hideSerch()" ng-show="isShow"><i class="fa fa-angle-double-up" aria-hidden="true"></i>&nbsp收起</div>
-            <div class="handup" ng-click="hideSerch()" ng-show="!isShow"><i class="fa fa-angle-double-down" aria-hidden="true"></i>&nbsp展开</div>
+            <div class="handup" ng-click="orderSunmmaryVm.hideSerch()" ng-show="orderSunmmaryVm.isShow"><i class="fa fa-angle-double-up" aria-hidden="true"></i>&nbsp收起</div>
+            <div class="handup" ng-click="orderSunmmaryVm.hideSerch()" ng-show="!orderSunmmaryVm.isShow"><i class="fa fa-angle-double-down" aria-hidden="true"></i>&nbsp展开</div>
         </div>
     </div>
 </div>
@@ -86,10 +51,10 @@
             <div>
 
             <div class="setting"><i class="fa fa-wrench" aria-hidden="true"></i><i class="fa fa-sort-desc" aria-hidden="true"></i></div>
-            <div class="findByGroup" ng-click="optionShow()">分组查看
+            <div class="findByGroup">分组查看
               <switch-btn></switch-btn>
             </div>
-            <div class="columSelect" ng-click="imgHide()">列选项
+            <div class="columSelect">列选项
               <switch-btn></switch-btn>
             </div>
             </div>

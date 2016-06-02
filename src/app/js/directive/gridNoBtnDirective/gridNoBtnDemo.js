@@ -5,7 +5,7 @@
  * Created by caikaijie on 2016/5/18.
  */
 (function () {
-    'use strict';
+    //'use strict';
     angular.module('wcprototype')
         .directive('gridNoBtnTable',gridTableFunc);
     /////////////////////////////////////////////////////////
@@ -25,19 +25,19 @@
                 scope.allSelectPre=false;//是否全选
                 scope.allSelectCount=false;//全选计数
                 if(attr.totalhide == 'true'){
-                  $('.data-total').css('display','none');
+                  element.find('.data-total').css('display','none');
                 }
                 //列选项监听
-                scope.$on('imgHide', function (event,data) {
+                scope.$on('imgHide', function () {
                         if(scope.imgCount%2==0){
-                            $('.table-grid-title>ul>li>i').css('display','none');
+                          element.find('.table-grid-title>ul>li>i').css('display','none');
                         }else{
-                            $('.table-grid-title>ul>li>i').css('display','block');
+                          element.find('.table-grid-title>ul>li>i').css('display','block');
                         }
                         scope.imgCount++;
                 });
                 //分组查看监听
-                scope.$on('optionHide', function (event,data) {
+                scope.$on('optionHide', function () {
                     if(scope.optionBlockClickCount%2==0){
                         scope.optionBlock=true;
                     }else{
@@ -53,28 +53,26 @@
                   if(scope.allSelectCount%2!=0){
                     scope.allSelectPre=true;
                     //if(scope.allSelectPre){
-                    for(var i=0;i<$('.table-grid-content').children().length;i++){
-                      scope.singleImgShow[i]=false;
-                      console.log($('.table-grid-content').children().length);
+                    for(var k=0;k<element.find('.table-grid-content').children().length;k++){
+                      scope.singleImgShow[k]=false;
                     }
                     //}
                   }else{
                     scope.allSelectPre=false;
-                    for(var i=0;i<$('.table-grid-content').children().length;i++){
+                    for(var i=0;i<element.find('.table-grid-content').children().length;i++){
                       scope.singleImgShow[i]=true;
-                      console.log($('.table-grid-content').children().length);
                     }
                   }
 
                   if(scope.imgShow){
-                    $('.table-grid-content>ul>li').css('background-color','#e4e4e4');
-                    $('#li-img-width>img').attr('src','../app/img/chk-bx_u766_selected.png');
-                    $('#li-grid-img-width>img').attr('src','../app/img/chk-bx_u766_selected.png');
+                    element.find('.table-grid-content>ul>li').css('background-color','#e4e4e4');
+                    element.find('#li-img-width>img').attr('src','../app/img/chk-bx_u766_selected.png');
+                    element.find('#li-grid-img-width>img').attr('src','../app/img/chk-bx_u766_selected.png');
                     scope.imgShow=false;
                   }else{
-                    $('.table-grid-content>ul>li').css('background-color','#ffffff');
-                    $('#li-img-width>img').attr('src','../app/img/u117_mouseOver.png');
-                    $('#li-grid-img-width>img').attr('src','../app/img/u117_mouseOver.png');
+                    element.find('.table-grid-content>ul>li').css('background-color','#ffffff');
+                    element.find('#li-img-width>img').attr('src','../app/img/u117_mouseOver.png');
+                    element.find('#li-grid-img-width>img').attr('src','../app/img/u117_mouseOver.png');
                     scope.imgShow=true;
                   }
 
@@ -90,9 +88,8 @@
                     }else{//没有全选需要初始化
                         if(scope.allSelectCount<1){
                             if(scope.count==0){
-                                for(var i=0;i<$('.table-grid-content').children().length;i++){
-                                    scope.singleImgShow[i]=true;
-                                    console.log($('.table-grid-content').children().length);
+                                for(var j=0;j<element.find('.table-grid-content').children().length;j++){
+                                    scope.singleImgShow[j]=true;
                                 }
                                 scope.count++;
                             }
@@ -100,30 +97,30 @@
 
                     }
                     if(scope.singleImgShow[buff]){//单选为true
-                        $('.table-grid-content')
+                      element.find('.table-grid-content')
                             .children()
                             .eq(buff)
                             .find('#li-grid-img-width>img')
                             .attr('src','../app/img/chk-bx_u766_selected.png');
-                        $('.table-grid-content')
+                      element.find('.table-grid-content')
                             .children()
                             .eq(buff)
                             .children().css('background-color','#e4e4e4');
                         scope.singleImgShow[buff]=false;
                         scope.allSelectPre=true;
                     }else{//单选为false
-                        $('.table-grid-content')
+                      element.find('.table-grid-content')
                             .children()
                             .eq(buff)
                             .find('#li-grid-img-width>img')
                             .attr('src','../app/img/u117_mouseOver.png');
                         if(buff%2==0){
-                            $('.table-grid-content')
+                          element.find('.table-grid-content')
                                 .children()
                                 .eq(buff)
                                 .children().css('background-color','#ffffff');
                         }else{
-                            $('.table-grid-content')
+                          element.find('.table-grid-content')
                                 .children()
                                 .eq(buff)
                                 .children().css('background-color','#F6F6F6');
@@ -136,7 +133,6 @@
                 }
             },
             controller : function(){
-                console.log('ulCount='+$('.table-grid-content').children().length);
             }
         }
     }

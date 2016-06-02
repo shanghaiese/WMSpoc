@@ -4,13 +4,15 @@
 (function () {
     'use strict';
     angular.module('wcprototype')
-        .controller('orderSunmmaryCtrl',orderSunmmaryCtrl);
+        .controller('orderSunmmaryController',orderSunmmaryController);
     /**
      *
      */
-    function orderSunmmaryCtrl($scope){
-        $scope.isShow=true;
-        $scope.testDataDrder=[
+    function orderSunmmaryController(){
+      var vm = this;
+      var orderSunmmaryVm = vm;
+      orderSunmmaryVm.isShow=true;
+      orderSunmmaryVm.testDataDrder=[
             {
                 orderNum:'00011604190003',
                 getGoodsStore : '008武胜路店',
@@ -112,24 +114,14 @@
                 notes : 'ffffff'
             }
         ];
-      console.log(JSON.stringify($scope.testDataDrder[0].orderNum));
-        $scope.hideSerch= function () {
-            console.log('hide');
-            if($scope.isShow){
-                $scope.isShow=false;
+      orderSunmmaryVm.hideSerch= function () {
+            if(orderSunmmaryVm.isShow){
+              orderSunmmaryVm.isShow=false;
             }else{
-                $scope.isShow=true;
+              orderSunmmaryVm.isShow=true;
             }
 
         };
-        $scope.imgHide= function () {
-            console.log('imgHide');
-            $scope.$broadcast('imgHide','imgHide');
-        };
-        $scope.optionShow= function () {
-            $scope.$broadcast('optionHide','optionHide');
-            $scope.$broadcast('switchturn','switchturn');
 
-        }
     }
 })();

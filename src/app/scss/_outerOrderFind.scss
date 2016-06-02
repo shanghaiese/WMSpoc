@@ -1,3 +1,5 @@
+
+
 .form-no-done{
   width: 100%;
   height: 200px;
@@ -24,11 +26,13 @@
 .search-name-find{
   float: left;
   margin: 15px;
+  margin-left: 35px;
+  color: #999999;
 }
 .form-search-btn-find{
   float: left;
   margin: 10px;
-  background: green;
+  background: #11a99b;
   padding: 5px;
   color: white;
   border-radius: 5px;
@@ -61,6 +65,8 @@
 }
 .navbar-static-top{
   z-index: 0;
+  background-color: #E4E4E4;
+  border: none;
 }
 .new-blank{
   float: right;
@@ -72,21 +78,20 @@
 
 
 .panel-info{
-  height: auto;
   max-height: 250px;
   background-color:$panel-bgColor ;
-  padding: 10px;
+  padding: 10px 10px 252px 10px;
 }
 
 .panel-size{
-
-  margin:10px 22px 10px 10px;
+  margin:10px 22px 10px 24px;
   background-color: $white;
   z-index: 0;
   box-shadow:0px 2px 3px 0px gray ;
 }
 
 .info-panel-header{
+  padding-right: 0px;
   border-radius: 0;
   background-color: $white;
   color: $panel-Color;
@@ -94,7 +99,7 @@
   height: 40px;
   .progress{
     height: 5px;
-    margin-top: 10px;
+    margin-top: 7px;
     margin-bottom: 0px;
   }
   .pull-right{
@@ -106,8 +111,8 @@
 }
 .info-panel-body{
   border-radius: 0;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: $white;
   color: $panel-Color;
   border-bottom: $hr-dashed ;
@@ -122,6 +127,7 @@
   padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 0px;
+  border: 1px solid #e4e4e4;
 }
 .padding-well{
   padding-left: 0px;
@@ -139,23 +145,26 @@
 }
 
 .main-number{
-  font-size: 18px;
+  font-size: 28px;
   color: $black;
 }
 .primary-number{
-  font-size: 18px;
+  font-size: 28px;
   color:$span-primary-number;
 }
 
 
 .true-number{
-  font-size: 18px;
+  font-size: 28px;
   color:$btn-green-hover;
 }
 
 .btn-green{
   background-color: $show-btn;
   color: $white;
+  padding-left: 22px;
+  padding-right: 22px;
+
   &:hover {
     background-color: $primary-sideBar-li-background;
     color: $white;
@@ -184,50 +193,157 @@
 }
 
 .text-box{
-  position:absolute;
-  width: 300px;
-  height: 400px;
+  position:fixed;
+  top: 95px;
+  right: 0;
+  width: 400px;
+  height: 480px;
   box-shadow:0px 2px 3px 0px gray ;
   background-color: $white;
-  z-index:2000;
-  top: 0px;
+  z-index:100;
+
+
+  .text-hr{
+    border-bottom:1px solid $hr-lightGray;
+  }
+
+  .nav-tabs > li > a:hover{
+    background-color: $white;
+  }
+
+  .nav-tabs>li.active>a , .nav-tabs>li.active > a:hover, .nav-tabs>li .active > a:focus{
+    border:0;
+    border-bottom: 2px solid $show-btn;
+    cursor: default;
+  }
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    border:0;
+    border-bottom: 2px solid $show-btn;
+  }
+
+  .nav-tabs > li > a:hover{
+    border:0;
+    border-bottom:2px solid $show-btn;
+  }
+
+  .inuput-text{
+    top: 45px;
+    width: 388px;
+    height: 75px;
+    border-radius: 0;
+    margin: 6px 6px 0 6px;
+    border-top: 1px solid $show-btn;
+    border-left: 1px solid $show-btn;
+    border-right: 1px solid $show-btn;
+    border-bottom: 1.5px solid $panel-hr;
+  }
+
+  .text-footer {
+    margin-left: 6px;
+    width: 388px;
+    height: 40px;
+    border-top: 0;
+    border-left: 1px solid $show-btn;
+    border-right: 1px solid $show-btn;
+    border-bottom: 1px solid $show-btn;
+
+    i{
+      font-size: 1.5em;
+      color: $text-icon;
+    }
+
+    .col-sm-3{
+      margin-top: 10px;
+      div{
+        margin-right: 10px;
+        &:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
 
 
 }
 
 .tabName{
-
   color:$font-color;
   &:hover{
-    border-bottom: 2px solid $show-btn;
+    //border-bottom: 2px solid $show-btn;
     color:$btn-black;
     cursor: pointer;
+    //padding-bottom: 8px;
   }
   a{
     color: $font-color;
     text-decoration:none;
-    color:$btn-black;
-    &:hover{
+    /*&:hover{
       color:$btn-black;
-    }
+    }*/
   }
 }
 
-.text-hr{
-  border-bottom:1px solid $hr-lightGray;
+.tabBtn{
+  margin-right: 12px;
+  a{
+    text-decoration: none;
+    color: $font-color;
+    &:hover{
+      cursor: pointer;
+      color:$sideBar-bgColor;
+    }
+  }
 
+}
+
+/*.text-hr{
+  border-bottom:1px solid $hr-lightGray;
 }
 
 
 .inuput-text{
-  top: 45px;width: 286px;height: 79px;margin-left: 6px;
+  top: 45px;
+  width: 388px;
+  height: 75px;
   border-radius: 0;
-  border: 1px solid $btn-green;
+  margin: 6px 6px 0 6px;
+  border-top: 1px solid $show-btn;
+  border-left: 1px solid $show-btn;
+  border-right: 1px solid $show-btn;
+  border-bottom: 1.5px solid $panel-hr;
 }
+
+.text-footer {
+  margin-left: 6px;
+  width: 388px;
+  height: 40px;
+  border-top: 0;
+  border-left: 1px solid $show-btn;
+  border-right: 1px solid $show-btn;
+  border-bottom: 1px solid $show-btn;
+
+  i{
+    font-size: 1.5em;
+    color: $text-icon;
+  }
+
+  .col-sm-3{
+    margin-top: 10px;
+    div{
+      margin-right: 10px;
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}*/
+
 #font-style{
   height: 39px;
   line-height: 39px;
   padding-left: 0;
+  font-size: 18px;
 }
 #completeProgress{
   height: 39px;
@@ -235,7 +351,9 @@
   float: right;
 }
 #progress-margin{
-  margin-top: 18px;
+  height: 10px;
+  margin-top: 14px;
+  width:220px;
   //float: right;
 }
 #percent-style{
@@ -257,6 +375,71 @@
 #left-margin{
   margin-left: 20px;
 }
-.nav-back{
-  margin-left: 20px;
+.subTitle-size{
+  width: 100px;
 }
+
+.nav-back{
+  margin-left: 0px;
+}
+.tab-choice{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  .close-margin{
+    margin-right: 20px;
+    padding-top: 16px;
+  }
+}
+
+.info-pin{
+  background-color: $red;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  border-bottom: 6px;
+}
+
+.progress-margin{
+  margin-right: 5px;
+}
+
+.textBox-margin{
+  border-bottom:1px solid $span-background;
+  margin: 0;
+}
+
+.highlight-number-success {
+  border-radius: 50%;
+  width: 15px;
+  color: $white;
+  background-color: $show-btn;
+  text-align: center;
+}
+
+.title-padding{
+  padding-right: 0px;
+  padding-top: 10px;
+}
+
+.bar-size{
+  height: 7px;
+}
+#btn-no-border{
+  border: none;
+}
+
+.info-margin{
+  margin-bottom: 8px;
+}
+
+.textBox-btn{
+  padding: 2px 5px 2px 5px;
+  margin-top: 5px;
+}
+.submit-btn{
+  font-size: 12px;
+  color: $white;
+}
+
+

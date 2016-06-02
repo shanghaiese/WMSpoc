@@ -6,13 +6,15 @@
   'use strict';
   angular
     .module('wcprototype')
-    .controller('wcprototypeCtrl',wcprototypeCtrl);
+    .controller('wcprototypeController',wcprototypeController);
   /////////////////////////////////////////////////////////
-  function wcprototypeCtrl($scope){
+  function wcprototypeController($scope) {
 
-     $scope.Fkey = function(){
-       var   wsh   =   new   activexobject("WScript.Shell");
-       wsh.sendKeys("{F11}");
+    /*$scope.Fkey = function(){
+     var   wsh   =   new   activexobject("WScript.Shell");
+     wsh.sendKeys("{F11}");
      };
+     */
+    $scope.showLogo = true;
   }
 })();

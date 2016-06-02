@@ -8,25 +8,32 @@ a{
   text-decoration: none;
 }
 .default_style {
-  position:absolute;;
+  position:absolute;
+
   /*background-color: aqua;*/
 }
 .side-list{
   height: 100%;
+  min-height:895px;
   margin: 0;
   padding-left: 0;
+  background-color: $sideBar-bgColor;
 }
 
+.image-padding{
+  padding-bottom: 10px;
+}
 
 .default_div_style {
   width: 200px;
   height: 100%;
   /*background-color: palegoldenrod;*/
+  display: none;
 }
 
 .rightIcon{
   width: 50px;
-  padding-left: 10px;
+  padding-left: 19px;
 }
 .rightCoverIcon{
   width:50px;
@@ -59,7 +66,7 @@ a{
 
 .side-list .li-header {
   width: 100%;
-  height: 34px;
+  height: 35px;
   text-align: center;
   color: white;
   list-style-type: none;
@@ -68,9 +75,16 @@ a{
 
   }
 }
-.icon-margin {
-  margin-top: 7px;
+
+.left-icon-margin{
   font-size: 1.5em;
+  margin-top: 7px;
+}
+.icon-margin {
+  font-size: 1.5em;
+  margin-left: 60px;
+  margin-top: 7px;
+
 }
 
 .li-sec-r {
@@ -121,9 +135,9 @@ a{
   }
 }
 
-.active {
+/*.active {
   background-color: $list-hover-bgColor;
-}
+}*/
 
 .short60 {
   width: 50px;
@@ -137,11 +151,13 @@ a{
 }
 
 .list-search-input{
-  margin-top: 8px;
+  margin-top: 7px;
   border: 0;
   border-radius: 0;
   background-color: $input-bgColor;
   color: $white;
+  height: 35px;
+
 }
 .form-padding{
   margin-top:8px;
@@ -176,7 +192,7 @@ a{
   color: $list-header-color;
   cursor: pointer;
   width: 50px;
-  height:34px;
+  height:35px;
 }
 
 .list-header-right{
@@ -186,7 +202,7 @@ a{
   width: 200px;
   display: none;
   z-index:-20;
-  height:34px;
+  height:35px;
 }
 
 
@@ -195,7 +211,9 @@ a{
   list-style-type: none;
   padding:0;
   text-align: left;
-  max-height:650px;
+  min-heigh:1000px;
+  height: auto;
+
   .secondary-list-header{
     font-size: 1.5em;
     color:$listTitle-color;
@@ -204,7 +222,7 @@ a{
   }
 
   .secondary-list-content{
-    font-size: 1.2em;
+    font-size: 1em;
     color:$list-color ;
     padding-left: 30px;
     &:hover{
@@ -213,9 +231,14 @@ a{
     }
   }
 }
+.font-main{
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "MicrosoftYaHei", "Microsoft YaHei";
+  font-size: 0.8em;
+
+}
 
 .list-scroll{
-  overflow-y:hidden;
+  overflow-y: scroll;
 }
 .leftPart{
   width: 50px;
@@ -241,14 +264,14 @@ a{
 
 .leftPart {
   .hover-event{
-    top:34px;
+    top:35px;
     left:50px;
     display: none;
     z-index:30;
     position: absolute;
     height:500px;
     width: 200px;
-    background-color: black;
+    background-color: $sideBar-bgColor-hover;;
   }
 }
 
@@ -275,6 +298,9 @@ a{
     color: $white;
     a{
       color: $white;
+      &:hover{
+        text-decoration: none;
+      }
     }
   }
   a{
@@ -284,7 +310,7 @@ a{
 
 .rightPart {
   .hover-event{
-    top:34px;
+    top:35px;
     left:200px;
     display: none;
     z-index:20;
@@ -301,5 +327,19 @@ a{
   display: block;
   max-height:500px;
   width: 200px;
+  background-color: $sideBar-bgColor-hover;
 }
 
+.thirdList-style{
+  height: 650px !important;
+  background-color:$sideBar-bgColor-hover;
+}
+
+
+.back-img-style{
+  width: 100%;
+  height: 200px;
+  //background-color: #00b3ee;
+  background-image: url("/app/img/cloud.png");
+  background-position: center;
+}

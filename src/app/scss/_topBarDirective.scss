@@ -1,6 +1,6 @@
 .short-desc-back {
   width: 100%;
-  height: 100px;
+  height: auto;
   border: 1px solid #e4e4e4;
   min-width: 900px;
 }
@@ -14,6 +14,7 @@
 .short-desc-bottom {
   width: 100%;
   height: 40px;
+  display: none;
 }
 
 .back-to-pre {
@@ -187,4 +188,23 @@
 .back-to-pre a:hover{
   color: black;
   background-color: #ffffff;
+}
+
+.progress-margin{
+  margin-right: 5px;
+}
+
+.toolBar-bar-size{
+  height: 7px;
+  margin-top: 12px;
+
+}
+
+.toolBar-1{
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.toolBar-2{
+  margin-top: 6px;
 }

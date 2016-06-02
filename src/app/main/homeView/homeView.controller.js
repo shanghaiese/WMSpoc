@@ -1,21 +1,21 @@
-/**
+/*
+/!**
  * Created by luyongjie on 2016/5/26.
- */
-/**
+ *!/
+/!**
  * Created by caikaijie on 2016/5/26.
- */
+ *!/
 (function () {
-  'use strict';
   angular
     .module('wcprototype')
-    .controller('orderSunmmaryCtrl',orderSunmmaryCtrl);
-  /**
+    .controller('orderSunmmaryController',orderSunmmaryController);
+  /!**
    *
    *
-   */
-  orderSunmmaryCtrl.$inject = ['$scope'];
+   *!/
+  orderSunmmaryController.$inject = ['$scope'];
 
-  function orderSunmmaryCtrl($scope) {
+  function orderSunmmaryController($scope) {
     $scope.testDataDrder=[
       {
         orderNum:'00011604190003',
@@ -120,3 +120,4 @@
     ];
   }
 })();
+*/

@@ -1,5 +1,5 @@
 <div class="table-grid-back-no">
-    <div class="findByGroup-layout-no" ng-show="optionBlock">
+    <div class="findByGroup-layout-no" ng-show="outerOrderFindVm.optionBlock">
         <div id="getGoodsStore-no">收货门店&nbsp<i class="fa fa-long-arrow-up" aria-hidden="true"></i>&nbsp X</div>
         <div>预收货日期&nbspX</div>
         <div>排车线路&nbspX</div>
@@ -7,7 +7,7 @@
     <div class="table-grid-title-no">
         <ul>
             <li id="li-img-width-no">
-                <img src="../app/img/u117_mouseOver.png" ng-click="allSelect()">
+                <img src="../app/img/u117_mouseOver.png" ng-click="outerOrderFindVm.allSelect()">
             </li>
             <li id="li-row-width-no">行</li>
             <li>单号<i class="fa fa-filter fa-filter-no" aria-hidden="true"></i></li>
@@ -21,7 +21,7 @@
         </ul>
     </div>
     <div class="table-grid-content-no">
-        <ul ng-repeat="data in testDataDrder">
+        <ul ng-repeat="data in outerOrderFindVm.testDataDrder">
             <li id="li-grid-img-width-no">
                 <img src="../app/img/u117_mouseOver.png" ng-click="mulSelect($index)">
             </li>

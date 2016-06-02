@@ -1,10 +1,11 @@
+/*
 'use strict';
 
 angular.module('wcprototype')
 
 .directive('acdCheckbox', AcdCheckboxDirective);
 
-/**
+/!**
  * @ngdoc directive
  * @module wcprototype
  * @name wcprototype.directive:acdCheckbox
@@ -20,7 +21,7 @@ angular.module('wcprototype')
  *
  *
  *
- */
+ *!/
 function AcdCheckboxDirective() {
 
   return {
@@ -32,3 +33,4 @@ function AcdCheckboxDirective() {
 	  '</label>'
   };
 }
+*/

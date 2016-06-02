@@ -1,20 +1,33 @@
 .head-padding {
   padding: 0px;
   margin: 0px;
+  font-size: 10px;
+  color: #888888;
 }
-
+.head-title-margin{
+  margin-left: 8px;
+}
 .inline {
   display: inline-block;
 }
 .list-inline{
   display: inline;
 }
+
+.headLogo-style{
+  padding-left: 0;
+}
+.headImage-style{
+  margin-bottom: 7px;
+}
+
 .scroll-btn-hover {
   color: $fontColor;
   border-radius: 2px;
   padding: 5px;
   height: 28px;
   width: 27px;
+  margin-top: 4px;
 }
 
 .scroll-icon {
@@ -25,13 +38,18 @@
   color: $fontColor;
   border: solid 1px $list-color;
   cursor: pointer;
+  margin-top:3px;
+}
+
+.headerIcon-size{
+  font-size: 1.5em;
 }
 
 .help-btn {
   height: 34px;
   width: 53px;
   padding-left: 12px;
-  padding-top: 7px;
+  padding-top: 11px;
   color: $font-color;
   cursor: pointer;
   &:hover {
@@ -75,7 +93,8 @@
 
 .highlight-number-danger {
   border-radius: 50%;
-  width: 20px;
+  width: 15px;
+  width: 15px;
   color: #FFFFFF;
   background-color: #FF6E4E;
   text-align: center;
@@ -84,12 +103,29 @@
   border: 0;
   border-radius: 3px;
 }
+.btnGroup-caret{
+  padding-bottom: 4px;
+}
+
+.btnGroup-caret2{
+  padding-bottom: 5px;
+}
+
+.btnGroup-size{
+  padding-left: 0px;
+  padding-top: 12px;
+}
+
+.btnGroup-size2{
+  padding-left: 20px;
+  padding-top: 11px;
+}
 
 .list-warning {
   border: 0;
   border-radius: 3px;
   padding-top:0px ;
-  width:300px;
+  width:320px;
 }
 
 .list-warning-header {
@@ -110,7 +146,9 @@
 
 }
 
-.list-warning-footer {}
+.list-warning-footer {
+  text-align: center;
+}
 
 .list-wharehouse{
   border: 0;
@@ -132,4 +170,39 @@
 .warehouse-check{
   color:$btn-green;
   background-color: $list-checked;
+}
+
+.icon-primary{
+  color: $white;
+  border-radius: 50%;
+  background-color: $show-btn;
+  padding: 5px;
+}
+
+.icon-danger{
+  color: $white;
+  border-radius: 50%;
+  background-color: $red;
+  padding: 5px;
+}
+
+.icon-success{
+  color: $white;
+  border-radius: 50%;
+  background-color: $med-dark-green;
+  padding: 5px;
+}
+
+.icon-yellow {
+  color: $white;
+  border-radius: 50%;
+  background-color: $light-yellow;
+  padding: 5px;
+}
+
+.icon-otherthing{
+  color: $panel-blue;
+  border-radius: 50%;
+  padding: 5px;
+  font-size: 2em;
 }

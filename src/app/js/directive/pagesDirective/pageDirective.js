@@ -5,7 +5,7 @@
  * Created by caikaijie on 2016/5/18.
  */
 (function () {
-    'use strict';
+    //'use strict';
     angular.module('wcprototype')
         .directive('pages',pagesFunc);
     /////////////////////////////////////////////////////////
@@ -14,13 +14,8 @@
             restrict : 'AE',
             //replace : true,
             transclude : true,
-            templateUrl : '/app/js/directive/pagesDirective/pageDemo.html',
-            link : function(scope,element,attr){
+            templateUrl : '/app/js/directive/pagesDirective/pageDemo.html'
 
-            },
-            controller : function(){
-
-            }
         }
     }
 })();

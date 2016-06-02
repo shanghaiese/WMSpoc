@@ -5,11 +5,20 @@
 
 .content-margin{
   margin-left: 50px;
-  min-width: 1375px;
-  overflow: auto;
+  min-width: 1200px;
+  overflow:hidden;
 
 }
 
+
 .well-width{
-  min-width: 1500px;
+  min-width: 1305px;
+}
+.ui-view-scroll{
+  overflow: auto;
+  overflow-x: hidden;
+}
+
+body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Helvetica Neue", "Luxi Sans", "DejaVu Sans", Tahoma, "Hiragino Sans GB", STHeiti, "MicrosoftYaHei", "Microsoft YaHei";
 }

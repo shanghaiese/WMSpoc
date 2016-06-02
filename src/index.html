@@ -19,6 +19,7 @@
     <link href="/bower_components/font-awesome/css/font-awesome.min.css">
     <link rel="shortcut icon" href=".././src/app/img/WMS2.png">
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.min.js"></script>
     <script src="/bower_components/jquery-ui/jquery-ui.min.js"></script>
     <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
@@ -29,33 +30,36 @@
     <!-- endbuild -->
 
   </head>
-  <body ng-controller="wcprototypeCtrl">
+  <body ng-controller="wcprototypeController">
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="row well-width">
+    <div class="row well-width" style="height: 35px;box-shadow:2px 2px 10px rgba(83, 86, 90, .3);z-index: 2;; ">
       <!-- partial-home.html 主页面 -->
       <div class="col-lg-1 inline">
         <div style="z-index: 2000000;">
           <vertical-Menu></vertical-Menu>
         </div>
       </div>
-      <div class="col-lg-11 inline">
+      <div class="col-lg-11 inline headLogo-style">
         <div>
           <div>
-            <div class="col-lg-2 pull-left head-padding">
-              <span><img src="../../../app/img/WMS2.png"> 物流仓库管理系统</span>
+            <div class="col-lg-4 pull-left head-padding" ng-show="showLogo" >
+              <div class="inline">
+                <img class="headImage-style" src="../../../app/img/WMS2.png"/>
+              </div>
+              <div class="head-title-margin inline"><h5>物流仓库管理系统</h5></div>
             </div>
             <div class="col-lg-6 pull-right head-padding">
               <div class="row">
                 <div class="col-lg-1 inline head-padding">
-                  <div class="scroll-btn-hover" ng-click="Fkey"><span class="fa fa-expand "></span></div>
+                  <div class="scroll-btn-hover" ng-click="Fkey"><span class="fa fa-expand headerIcon-size"></span></div>
                 </div>
                 <div class="col-lg-1 inline head-padding">
                   <div class="btn-group">
                     <div type="button" class="help-btn " data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <div class="inline"><span class="fa fa-question-circle"></span></div>
+                      <div class="inline"><span class="fa fa-question-circle headerIcon-size"></span></div>
                       <span class="caret inline"></span>
                     </div>
                     <ul class="dropdown-menu list-contact">
@@ -73,14 +77,14 @@
                 <div class="col-lg-1 inline head-padding">
                   <div class="btn-group">
                     <div type="button" class="help-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <div class="inline"><span class="fa fa-bell"></span></div>
+                      <div class="inline"><span class="fa fa-bell headerIcon-size"></span></div>
                       <div class="inline highlight-number-danger">6</div>
                     </div>
                     <ul class="dropdown-menu list-warning">
                       <div class="list-warning-header">消息通知</div>
-                      <li class="list-warning-content">
+                      <li class="list-warning-content container-fluid">
                         <div class="row">
-                          <div class="col-lg-2"><span class="fa fa-volume-up"></span></div>
+                          <div class="col-lg-2"><span class="icon-primary fa fa-volume-up headerIcon-size"></span></div>
                           <div class="col-lg-8">
                               <div class="row">
                                 <div class="pull-left">系统通知</div>
@@ -89,13 +93,13 @@
                               <div>5月15号凌晨2:00进行系统更新，请各部们注意</div>
                             </div>
                             <div class="col-sm-2 list-inline">
-                              <span class="fa fa-times"></span>
+                              <span class="fa fa-times headerIcon-size"></span>
                             </div>
                         </div>
                       </li>
-                      <li class="list-warning-content">
+                      <li class="list-warning-content container-fluid">
                         <div class="row">
-                            <div class="col-lg-2"><span class="fa fa-check-circle"></span></div>
+                            <div class="col-lg-2"><span class="icon-success fa fa-check headerIcon-size"></span></div>
                             <div class="col-lg-8">
                               <div>
                                 <div class="pull-left">波批次作业完成</div>
@@ -104,14 +108,14 @@
                               <div>波批次作业:2016 xxxxxxx</div>
                             </div>
                             <div class="col-lg-2 ">
-                              <span class="fa fa-times"></span>
+                              <span class="fa fa-times headerIcon-size"></span>
                             </div>
                         </div>
                       </li>
-                      <li class="list-warning-content">
+                      <li class="list-warning-content container-fluid">
                         <div class="row">
                           <a href="#">
-                            <div class="col-lg-2"><span class="fa fa-volume-up"></span></div>
+                            <div class="col-lg-2"><span class="icon-yellow fa fa-exclamation-triangle headerIcon-size"></span></div>
                             <div class="col-lg-10">
                               <div>
                                 <div class="pull-left">发货通知</div>
@@ -122,10 +126,10 @@
                           </a>
                         </div>
                       </li>
-                      <li class="list-warning-content">
+                      <li class="list-warning-content container-fluid">
                         <div class="row">
                           <a href="#">
-                            <div class="col-lg-2"><span class="fa fa-info-circle"></span></div>
+                            <div class="col-lg-2"><span class="icon-otherthing fa fa-info-circle headerIcon-size"></span></div>
                             <div class="col-lg-10">
                               <div>
                                 <div class="pull-left">未分类消息1标题1</div>
@@ -143,7 +147,7 @@
                 <div class="col-lg-1 inline head-padding">
                   <div class="btn-group">
                     <div type="button" class="help-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <div class="inline"><span class="fa fa-cog"></span></div>
+                      <div class="inline"><span class="fa fa-cog headerIcon-size"></span></div>
                       <span class="caret inline"></span>
                     </div>
                     <ul class="dropdown-menu">
@@ -157,13 +161,13 @@
                 </div>
                 <div class="col-lg-2 inline head-padding">
                   <div class="btn-group">
-                    <div type="button" class="toggle-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <div class="inline"><span class="fa fa-indent">001总仓库</span></div>
-                      <span class="caret inline"></span>
+                    <div type="button" class="toggle-btn btnGroup-size" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <div class="inline"><span class="fa fa-indent headerIcon-size">&nbsp;&nbsp;<span class="font-main">001总大库</span></span></div>
+                      <span class="caret inline btnGroup-caret"></span>
                     </div>
                     <ul class="dropdown-menu list-wharehouse">
                       <div class="list-wharehouse-header">可切换仓库</div>
-                      <li class="warehouse-check"><a href="#">总仓库 <span class="fa fa-check pull-right"></span></a></li>
+                      <li class="warehouse-check"><a href="#">总仓库 <span class="fa fa-check pull-right headerIcon-size"></span></a></li>
                       <li><a href="#">杭州仓库</a></li>
                       <li><a href="#">武汉仓库</a></li>
                     </ul>
@@ -171,9 +175,9 @@
                 </div>
                 <div class="col-lg-3 inline head-padding user-btn-margin">
                   <div class="btn-group">
-                    <div type="button" class="toggle-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <div class="inline"><span class="fa user"></span>admin管理员</div>
-                      <span class="caret inline"></span>
+                    <div type="button" class="toggle-btn btnGroup-size2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <div class="inline"><span class="fa fa-user headerIcon-size"></span>&nbsp;&nbsp;admin管理员</div>
+                      <span class="caret inline btnGroup-caret2"></span>
                     </div>
                     <ul class="dropdown-menu">
                       <li><a href="#">个人设置</a></li>
@@ -197,7 +201,7 @@
     </div>-->
     <!--{{hello}}-->
     <div class="content-margin well-width" >
-      <div ui-view></div>
+      <div ui-view class="ui-view-scroll"></div>
     </div>
 
 

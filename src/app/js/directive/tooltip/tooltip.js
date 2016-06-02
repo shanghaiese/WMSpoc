@@ -1,16 +1,17 @@
-'use strict';
+/*
+//'use strict';
 
-/**
+/!**
  * @ngdoc overview
  * @name wcprototype.tooltip
  *
  * @description
  * 这个模块包含了工具提示框的所有指令。
  *
- */
+ *!/
 angular.module('wcprototype.tooltip', ['ui.bootstrap.tooltip'])
 
-/**
+/!**
  * @ngdoc directive
  * @module wcprototype.tooltip
  * @name wcprototype.tooltip.directive:acdTooltipClasses
@@ -22,7 +23,7 @@ angular.module('wcprototype.tooltip', ['ui.bootstrap.tooltip'])
  *
  * **如无重新构建工具提示框需要，一般开发不需要使用此指令**
  *
- */
+ *!/
 .directive('acdTooltipClasses', ['$uibPosition', function($uibPosition) {
   return {
   	restrict: 'A',
@@ -43,7 +44,7 @@ angular.module('wcprototype.tooltip', ['ui.bootstrap.tooltip'])
   };
 }])
 
-/**
+/!**
  * @ngdoc directive
  * @module wcprototype.tooltip
  * @name wcprototype.tooltip.directive:acdTooltipTemplateTransclude
@@ -55,7 +56,7 @@ angular.module('wcprototype.tooltip', ['ui.bootstrap.tooltip'])
  *
  * **如无重新构建工具提示框需要，一般开发不需要使用此指令**
  *
- */
+ *!/
 .directive('acdTooltipTemplateTransclude', ['$animate', '$sce', '$compile', '$templateRequest',
 function ($animate, $sce, $compile, $templateRequest) {
   return {
@@ -124,7 +125,7 @@ function ($animate, $sce, $compile, $templateRequest) {
   };
 }])
 
-/**
+/!**
  * @ngdoc directive
  * @module wcprototype.tooltip
  * @name wcprototype.tooltip.directive:acdTooltip
@@ -198,7 +199,7 @@ function ($animate, $sce, $compile, $templateRequest) {
  *     });
  *   </file>
  * </example>
- */
+ *!/
 .directive('acdTooltip', ['$uibTooltip', function($uibTooltip) {
   return $uibTooltip('acdTooltip', 'tooltip', 'mouseenter');
 }])
@@ -217,7 +218,7 @@ function ($animate, $sce, $compile, $templateRequest) {
   };
 })
 
-/**
+/!**
  * @ngdoc directive
  * @module wcprototype.tooltip
  * @name wcprototype.tooltip.directive:acdTooltipTemplate
@@ -289,7 +290,7 @@ function ($animate, $sce, $compile, $templateRequest) {
  *     });
  *   </file>
  * </example>
- */
+ *!/
 .directive('acdTooltipTemplate', ['$uibTooltip', function($uibTooltip) {
   return $uibTooltip('acdTooltipTemplate', 'tooltip', 'mouseenter', {
   	useContentExp: true
@@ -311,7 +312,7 @@ function ($animate, $sce, $compile, $templateRequest) {
   };
 })
 
-/**
+/!**
  * @ngdoc directive
  * @module wcprototype.tooltip
  * @name wcprototype.tooltip.directive:acdTooltipHtml
@@ -321,7 +322,7 @@ function ($animate, $sce, $compile, $templateRequest) {
  *
  * acdTooltipTemplate指令包装了angular-bootstrap模块的[uib-tooltip-html指令](https://github.com/angular-ui/bootstrap/blob/master/src/tooltip/tooltip.js)指令，官方[示例参见](http://angular-ui.github.io/bootstrap/#/tooltip)。
  *
- */
+ *!/
 .directive('acdTooltipHtml', ['$uibTooltip', function($uibTooltip) {
   return $uibTooltip('acdTooltipHtml', 'tooltip', 'mouseenter', {
     useContentExp: true
@@ -341,3 +342,4 @@ function ($animate, $sce, $compile, $templateRequest) {
     templateUrl: 'acd/template/tooltip/tooltip-html-popup.html'
   };
 });
+*/

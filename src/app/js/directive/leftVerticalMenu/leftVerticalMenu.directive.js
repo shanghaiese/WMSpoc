@@ -1,11 +1,7 @@
 /**
- * Created by luyongjie on 2016/5/24.
- */
-/**
- * Created by Administrator on 2016/5/18.
+ * Created by caikaijie on 2016/5/18.
  */
 (function () {
-  'use strict';
   angular.module('wcprototype')
     .directive('verticalMenu',verticalMenuFunc);
   /////////////////////////////////////////////////
@@ -15,21 +11,22 @@
       replace : true,
       transclude : true,
       templateUrl : '/app/js/directive/leftVerticalMenu/leftVerticalMenu.tpl.html',
-      link : function(scope,element,attr){
+      link : function(scope,element){
 
         scope.showRight = function(){
-          $('.list-header-left').css('display','none').css('z-index','-20');
-          $('.list-header-right').css('display','block').css('z-index','20');
-          $('.leftPart').css('display','none');
-          $('.rightPart').css('display','block').css('position','relative').css('z-index','200000 !important');
-
-        }
+          element.find('.list-header-left').css('display','none').css('z-index','-20');
+          element.find('.list-header-right').css('display','block').css('z-index','20');
+          element.find('.leftPart').css('display','none');
+          element.find('.rightPart').css('display','block').css('position','relative').css('z-index','200000 !important');
+          scope.showLogo = false;
+        };
 
         scope.hideRight = function () {
-          $('.list-header-left').css('display', 'block').css('z-index','20');
-          $('.list-header-right').css('display', 'none').css('z-index','-20');
-          $('.leftPart').css('display', 'block').css('z-index','0');
-          $('.rightPart').css('display', 'none');
+          element.find('.list-header-left').css('display', 'block').css('z-index','20');
+          element.find('.list-header-right').css('display', 'none').css('z-index','-20');
+          element.find('.leftPart').css('display', 'block').css('z-index','0');
+          element.find('.rightPart').css('display', 'none');
+          scope.showLogo = true;
         }
       },
       controller : function(){

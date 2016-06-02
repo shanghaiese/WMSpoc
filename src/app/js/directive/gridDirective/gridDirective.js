@@ -24,25 +24,25 @@
                 scope.optionBlockClickCount=0;
                 scope.allSelectPre=false;//是否全选
                 scope.allSelectCount=false;//全选计数
-              $('.findByGroup-layout').css('display','none');
+                element.find('.findByGroup-layout').css('display','none');
                 if(attr.totalhide == 'true'){
-                  $('.data-total').css('display','none');
+                  element.find('.data-total').css('display','none');
                 }
                 //列选项监听
-                scope.$on('imgHide', function (event,data) {
+                scope.$on('imgHide', function () {
                         if(scope.imgCount%2==0){
-                            $('.table-grid-title>ul>li>i').css('display','none');
+                          element.find('.table-grid-title>ul>li>i').css('display','none');
                         }else{
-                            $('.table-grid-title>ul>li>i').css('display','block');
+                          element.find('.table-grid-title>ul>li>i').css('display','block');
                         }
                         scope.imgCount++;
                 });
                 //分组查看监听
-                scope.$on('optionHide', function (event,data) {
+                scope.$on('optionHide', function () {
                     if(scope.optionBlockClickCount%2 == 0){
-                      $('.findByGroup-layout').css('display','block');
+                      element.find('.findByGroup-layout').css('display','block');
                     }else{
-                      $('.findByGroup-layout').css('display','none');
+                      element.find('.findByGroup-layout').css('display','none');
                     }
                     scope.optionBlockClickCount++;
                 });
@@ -53,33 +53,28 @@
                   scope.allSelectCount++;
                   if(scope.allSelectCount%2!=0){
                     scope.allSelectPre=true;
-                    //if(scope.allSelectPre){
-                    for(var i=0;i<$('.table-grid-content').children().length;i++){
+                    for(var i=0;i<element.find('.table-grid-content').children().length;i++){
                       scope.singleImgShow[i]=false;
-                      console.log($('.table-grid-content').children().length);
                     }
-                    //}
                   }else{
                     scope.allSelectPre=false;
-                    for(var i=0;i<$('.table-grid-content').children().length;i++){
-                      scope.singleImgShow[i]=true;
-                      console.log($('.table-grid-content').children().length);
+                    for(var j=0;j<element.find('.table-grid-content').children().length;j++){
+                      scope.singleImgShow[j]=true;
                     }
                   }
-
                   if(scope.imgShow){
-                    $('.table-grid-content>ul>li').css('background-color','#e4e4e4');
-                    $('#li-img-width>img').attr('src','../app/img/chk-bx_u766_selected.png');
-                    $('#li-grid-img-width>img').attr('src','../app/img/chk-bx_u766_selected.png');
+                    //element.find('.table-grid-content>ul>li').css('background-color','#e4e4e4');
+                    element.find('.table-grid-content>ul>li').addClass('gridDemoStyle');
+                    element.find('#li-img-width>img').attr('src','../app/img/chk-bx_u766_selected.png');
+                    element.find('#li-grid-img-width>img').attr('src','../app/img/chk-bx_u766_selected.png');
                     scope.imgShow=false;
                   }else{
-                    $('.table-grid-content>ul>li').css('background-color','#ffffff');
-                    $('#li-img-width>img').attr('src','../app/img/u117_mouseOver.png');
-                    $('#li-grid-img-width>img').attr('src','../app/img/u117_mouseOver.png');
+                    //element.find('.table-grid-content>ul>li').css('background-color','#ffffff');
+                    element.find('.table-grid-content>ul>li').removeClass('gridDemoStyle');
+                    element.find('#li-img-width>img').attr('src','../app/img/u117_mouseOver.png');
+                    element.find('#li-grid-img-width>img').attr('src','../app/img/u117_mouseOver.png');
                     scope.imgShow=true;
                   }
-
-
                 };
                 /**
                  * 多选
@@ -91,9 +86,8 @@
                     }else{//没有全选需要初始化
                         if(scope.allSelectCount<1){
                             if(scope.count==0){
-                                for(var i=0;i<$('.table-grid-content').children().length;i++){
+                                for(var i=0;i<element.find('.table-grid-content').children().length;i++){
                                     scope.singleImgShow[i]=true;
-                                    console.log($('.table-grid-content').children().length);
                                 }
                                 scope.count++;
                             }
@@ -101,30 +95,30 @@
 
                     }
                     if(scope.singleImgShow[buff]){//单选为true
-                        $('.table-grid-content')
+                        element.find('.table-grid-content')
                             .children()
                             .eq(buff)
                             .find('#li-grid-img-width>img')
                             .attr('src','../app/img/chk-bx_u766_selected.png');
-                        $('.table-grid-content')
+                      element.find('.table-grid-content')
                             .children()
                             .eq(buff)
                             .children().css('background-color','#e4e4e4');
                         scope.singleImgShow[buff]=false;
                         scope.allSelectPre=true;
                     }else{//单选为false
-                        $('.table-grid-content')
+                      element.find('.table-grid-content')
                             .children()
                             .eq(buff)
                             .find('#li-grid-img-width>img')
                             .attr('src','../app/img/u117_mouseOver.png');
                         if(buff%2==0){
-                            $('.table-grid-content')
+                          element.find('.table-grid-content')
                                 .children()
                                 .eq(buff)
                                 .children().css('background-color','#ffffff');
                         }else{
-                            $('.table-grid-content')
+                          element.find('.table-grid-content')
                                 .children()
                                 .eq(buff)
                                 .children().css('background-color','#F6F6F6');
@@ -137,7 +131,6 @@
                 }
             },
             controller : function(){
-                console.log('ulCount='+$('.table-grid-content').children().length);
             }
         }
     }
